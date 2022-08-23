@@ -19,3 +19,30 @@ const songList = [
         cover: "3.jpg"
     },
 ]
+
+// Capturar elementos del DOM para trabajar con JS
+const songs = document.getElementById("songs")
+
+
+// Cargar canciones y mostrar el listado
+function loadSongs() {
+    songList.forEach((song, index) => {
+        // Crear li
+        const li = document.createElement("li")
+        // Crear a
+        const link = document.createElement("a")
+        // Hidratar a
+        link.textContent = song.title
+        link.href = "#"
+        // Añadir a li
+        li.appendChild(link)
+        // añadir li a lu
+        songs.appendChild(li)
+     })
+}
+
+// Cargar cancion seleccionada
+function loadSong(songIndex)
+
+// GO!
+loadSongs()
